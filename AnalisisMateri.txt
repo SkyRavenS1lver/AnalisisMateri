@@ -1,0 +1,53 @@
+Analisis Materi GIT
+
+Git (Group Inclusive Tour) merupakan version control system (VCS) yang bersifat open source dan gratis. Git memungkinkan tim pengembang untuk melakukan pengerjaan secara bersamaan pada suatu project dan memiliki fitur untuk melacak setiap perubahan yang dilakukan pada sumber kode proyek tersebut. 
+
+Git terbagi menjadi 2 sistem, yaitu centralized dan distributed. Centralized artinya bekerja menggunakan satu server untuk menyimpan data dari project. Sedangkan pada distributed data project disimpan di lokal dan juga di server, sehingga saat terjadi corrupt pada server data masih tetap aman karena terdapat backup di lokal.
+
+Fitur-fitur yang dapat digunakan pada Git yaitu:
+1. Version control
+Dimana Git menyimpan perubahan yang diubah pada sumber kode sehingga pengembang dapat mengelola dan memantau perubahan code
+2. Git Branch
+Penambahan cabang baru dari cabang utama sehingga tidak mengganggu sumber code utama saat pengembang akan menambahkan fitur baru. 
+3. Merge
+Penggabungan perubahan yang ada pada branch baru dengan branch utama.
+4. Staging area
+Pemilihan perubahan yang akan di-commit ke repository
+5. Rebase
+Menggabungkan atau menggeser commit base, sehingga commit yang telah dilakukan akan di-commit kembali di atas branch utama yang baru
+6. Hooks
+Script yang dijalankan secara otomatis pada suatu peristiwa, seperti saat push atau commit.
+7. GUI Tools
+Memudahkan penggunaan fitur-fitur Git bagi pengguna.
+8. Commit
+Merekam perubahan yang terjadi pada repository
+9. Push
+Melakukan update pada data di remote repository
+
+Keunggulan Git yaitu: 
+1. dapat mengelola versi kode sumber dengan mudah dan efisien; 
+2. Dapat melakukan branching dan merging dengan mudah dan aman; 
+3. Melacak perubahan dan siapa yang membuat perubahan pada kode sumber; 
+4. Performa cepat dan stabil
+Kelemahan Git yaitu: 
+1. Fitur yang kompleks dan terkadang membingungkan bagi pengguna yang kurang berpengalaman; 
+2. Memerlukan pemahaman yang baik tentang konsep dasar Git, seperti repository, commit, branching, dan merging; 
+3. Sulit digunakan untuk pengelolaan file biner atau non-teks, seperti gambar atau video.
+
+Gitlab dan Github menyediakan layanan akses remote ke Git repositories. Gitlab juga dapat digunakan untuk melakukan hosting project yang bersifat static. 
+
+Sebelum melakukan commit dan push, pastikan bahwa git sudah terdaftar menggunakan akun pengguna. Penambahan akun dapat dilakukan dengan menggunakan command 'git config --global user.name "UserName"' dan command
+'git config --global user.email "Email"', untuk memastikan apakah akun sudah berhasil ditambahkan, dapat dijalankan perintah 'git config --list'.
+
+Kita bisa membuat repository baru di lokal menggunakan command ‘git init’ yang dijalankan melalui git bash.
+Kemudian command ‘git add’ digunakan untuk menambah file ke repository yang telah dibuat. Untuk menambah semua file yang ada di suatu folder ke dalam repository, gunakan perintah ‘git add .’.
+Kemudian untuk merekam perubahan yang telah dilakukan, perlu dilakukan commit terlebih dahulu. Setiap kontributor bisa memberikan konfirmasi update file pada proyek yang dikerjakan dengan memberikan pesan yang jelas saat melakukan commit. 
+Untuk menambahkan remote repository di github, dapat digunakan perintah ‘git remote add origin <link repo>’. Setelah remote berhasil ditambahkan, dapat dilakukan push commit dari local ke remote menggunakan perintah ‘git push -u origin master’
+Untuk mengambil data terbaru yang telah ditambahkan di remote github ke repository local, dapat digunakan perintah ‘git pull origin’
+Pada saat pengembang mengerjakan fitur baru, maka seringnya code yang ditambahkan berada di branch yang lain. Untuk menggabungkan commit yang telah ditambahkan di branch lain tersebut ke branch utama, maka digunakanlah fitur merge. Jika terdapat conflict dikarenakan terdapat perbedaan isi file yang tidak dapat terselesaikan, maka pengembang dapat memilih untuk menerima perubahan dari salah satu branch atau menerima keduanya.
+Untuk mengubah branch akan digunakan selanjutnya, maka digunakanlah fitur checkout branch.
+Fitur git revert digunakan untuk mengembalikan keadaan repository ke keadaan dari suatu versi yang ditandai dengan penggunaan code yang didapatkan dari Github menu commit. 
+
+CI/CD dapat digunakan untuk melakukan otomasi saat proses pengembangan hingga proses produksi (Deployment). CI/CD di Github dapat dibuat menggunakan fitur action dari github.
+
+Github memiliki beberapa fitur dokumentasi gratis yang dapat digunakan, yaitu issue dan wiki. Issue pada Git adalah fitur yang memungkinkan pengguna untuk melacak masalah atau permintaan fitur pada proyek software. Sedangkan Wiki adalah fitur yang memungkinkan pengguna untuk membuat dan mengelola dokumentasi proyek perangkat lunak. Biasanya Wiki berisikan panduan pengguna, spesifikasi teknis serta petunjuk teknis.
